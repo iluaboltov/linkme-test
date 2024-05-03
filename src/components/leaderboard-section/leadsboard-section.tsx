@@ -1,7 +1,7 @@
 import getUsers from "@/api/getSortedUser";
 import { Button } from "@/components/UI/button";
 import { Card } from "@/components/UI/card";
-import { Search } from "@/components/UI/input";
+import { Search } from "../UI/search";
 import { LeadsItem } from "@/components/UI/leads-item";
 import { Skeleton } from "@/components/UI/skeleton";
 import { SkeletonButton } from "@/components/UI/skeleton-button";
