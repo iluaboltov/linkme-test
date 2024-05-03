@@ -7,14 +7,14 @@ import { Skeleton } from "@/components/UI/skeleton";
 import { SkeletonButton } from "@/components/UI/skeleton-button";
 import { SkeletonLeadsItem } from "@/components/UI/skeleton-leads-item";
 import { SkeletonSearch } from "@/components/UI/skeleton-search";
-import { LeadsChartTop } from "@/enums/LeadsChartTop";
+import { LeadsTimeRange } from "@/enums/LeadsTimeRange";
 import { SortedUserRecord, UserRecord } from "@/types/userRecord";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 // TODO SORT AND SEARCH
 export const LeadsboardSection = () => {
-  const [timeRange, setTimeRange] = useState<LeadsChartTop>(LeadsChartTop.Sevendays)
+  const [timeRange, setTimeRange] = useState<LeadsTimeRange>(LeadsTimeRange.Sevendays)
   const [isLoading, setLoading] = useState(true)
   const [users, setUsers] = useState<SortedUserRecord | null>(null)
   const [activeUsersRange, setActiveUsersRange] = useState<UserRecord[] | null>(null)
@@ -71,17 +71,17 @@ export const LeadsboardSection = () => {
         <div className={'flex flex-col gap-4'}>
           <div className={"flex justify-around flex-1 gap-2"}>
             <Button
-              isActive={timeRange == LeadsChartTop.Sevendays}
-              onClick={() => setTimeRange(LeadsChartTop.Sevendays)}>7 days</Button>
+              isActive={timeRange == LeadsTimeRange.Sevendays}
+              onClick={() => setTimeRange(LeadsTimeRange.Sevendays)}>7 days</Button>
             <Button
-              isActive={timeRange == LeadsChartTop.Fourteendays}
-              onClick={() => setTimeRange(LeadsChartTop.Fourteendays)}>14 days</Button>
+              isActive={timeRange == LeadsTimeRange.Fourteendays}
+              onClick={() => setTimeRange(LeadsTimeRange.Fourteendays)}>14 days</Button>
             <Button
-              isActive={timeRange == LeadsChartTop.Thirtydays}
-              onClick={() => setTimeRange(LeadsChartTop.Thirtydays)}>30 days</Button>
+              isActive={timeRange == LeadsTimeRange.Thirtydays}
+              onClick={() => setTimeRange(LeadsTimeRange.Thirtydays)}>30 days</Button>
             <Button
-              isActive={timeRange == LeadsChartTop.Sixtydays}
-              onClick={() => setTimeRange(LeadsChartTop.Sixtydays)}>60 days</Button>
+              isActive={timeRange == LeadsTimeRange.Sixtydays}
+              onClick={() => setTimeRange(LeadsTimeRange.Sixtydays)}>60 days</Button>
           </div>
           <div>
             {
