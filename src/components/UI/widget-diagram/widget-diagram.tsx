@@ -15,42 +15,42 @@ export const WidgetDiagram = () => {
           className={'relative flex-1 max-w-12 xl:max-w-16 rounded-t-lg border border-solid border-blue border-opacity-40 h-48 bg-gradient-blue-white text-blue'}>
           <AccountCircleOutlinedIcon
             className={'absolute bottom-0 left-1/2 translate-y-1/2 bg-white rounded-full -translate-x-1/2 shadow-xl shadow-blue'}
-            sx={{fontSize: { xs: 16, sm: 26, md: 36, lg: 40, xl: 46} }}
+            sx={{fontSize: { lg: 40, md: 36, sm: 26, xl: 46, xs: 16} }}
           />
         </span>
         <span
           className={'relative flex-1 max-w-12 xl:max-w-16 rounded-t-lg border border-solid border-blue border-opacity-40 h-40 bg-gradient-blue-white text-blue'}>
           <AccountCircleOutlinedIcon
             className={'absolute bottom-0 left-1/2 translate-y-1/2 bg-white rounded-full -translate-x-1/2 shadow-xl shadow-blue'}
-            sx={{fontSize: { xs: 16, sm: 26, md: 36, lg: 40, xl: 46} }}
+            sx={{fontSize: { lg: 40, md: 36, sm: 26, xl: 46, xs: 16} }}
           />
         </span>
         <span
           className={'relative flex-1 max-w-12 xl:max-w-16 rounded-t-lg border border-solid border-blue border-opacity-40 h-36 bg-gradient-blue-white text-blue'}>
           <AccountCircleOutlinedIcon
             className={'absolute bottom-0 left-1/2 translate-y-1/2 bg-white rounded-full -translate-x-1/2 shadow-xl shadow-blue'}
-            sx={{fontSize: { xs: 16, sm: 26, md: 36, lg: 40, xl: 46} }}
+            sx={{fontSize: { lg: 40, md: 36, sm: 26, xl: 46, xs: 16} }}
           />
         </span>
         <span
           className={'relative flex-1 max-w-12 xl:max-w-16 rounded-t-lg border border-solid border-blue border-opacity-40 h-28 bg-gradient-blue-white text-blue'}>
           <AccountCircleOutlinedIcon
             className={'absolute bottom-0 left-1/2 translate-y-1/2 bg-white rounded-full -translate-x-1/2 shadow-xl shadow-blue'}
-            sx={{fontSize: { xs: 16, sm: 26, md: 36, lg: 40, xl: 46} }}
+            sx={{fontSize: { lg: 40, md: 36, sm: 26, xl: 46, xs: 16} }}
           />
         </span>
         <span
           className={'relative flex-1 max-w-12 xl:max-w-16 rounded-t-lg border border-solid border-blue border-opacity-40 h-24 bg-gradient-blue-white text-blue'}>
           <AccountCircleOutlinedIcon
             className={'absolute bottom-0 left-1/2 translate-y-1/2 bg-white rounded-full -translate-x-1/2 shadow-xl shadow-blue'}
-            sx={{fontSize: { xs: 16, sm: 26, md: 36, lg: 40, xl: 46} }}
+            sx={{fontSize: { lg: 40, md: 36, sm: 26, xl: 46, xs: 16} }}
           />
         </span>
         <span
           className={'relative flex-1 max-w-12 xl:max-w-16 rounded-t-lg border border-solid border-blue border-opacity-40 h-14 bg-gradient-blue-white text-blue'}>
           <AccountCircleOutlinedIcon
             className={'absolute bottom-0 left-1/2 translate-y-1/2 bg-white rounded-full -translate-x-1/2 shadow-xl shadow-blue'}
-            sx={{fontSize: { xs: 16, sm: 26, md: 36, lg: 40, xl: 46} }}
+            sx={{fontSize: { lg: 40, md: 36, sm: 26, xl: 46, xs: 16} }}
           />
         </span>
       </div>

@@ -1,7 +1,6 @@
 import getUsers from "@/api/getSortedUser";
 import { Button } from "@/components/UI/button";
 import { Card } from "@/components/UI/card";
-import { Search } from "../UI/search";
 import { LeadsItem } from "@/components/UI/leads-item";
 import { Skeleton } from "@/components/UI/skeleton";
 import { SkeletonButton } from "@/components/UI/skeleton-button";
@@ -11,6 +10,8 @@ import { LeadsTimeRange } from "@/enums/LeadsTimeRange";
 import { SortedUserRecord, UserRecord } from "@/types/userRecord";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+
+import { Search } from "../UI/search";
 
 // TODO SORT AND SEARCH
 export const LeadsboardSection = () => {
