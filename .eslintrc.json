@@ -1,3 +1,22 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["unused-imports", "perfectionist"],
+  "extends": ["next/core-web-vitals", "plugin:perfectionist/recommended-natural"],
+  "ignorePatterns": ["node_modules", "build", ".history", "next"],
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["*.*"],
+      "rules": {
+        "@next/next/no-html-link-for-pages": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ]
 }
