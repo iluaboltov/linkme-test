@@ -65,12 +65,12 @@ export const LeadsboardSection = () => {
   }
 
   return (
-    <section className={'flex flex-col flex-1 min-w-80 max-w-[60rem] gap-4'}>
+    <section className={'flex flex-col flex-1 h-full min-w-80 max-w-[60rem] gap-4'}>
       <Search onChange={setFoundUsers} users={activeUsersRange}/>
-      <Card className={'flex flex-col gap-4 p-4'}>
-        <h2 className={'text-xl text-secondary'}>Top Performers</h2>
-        <div className={'flex flex-col gap-4'}>
-          <div className={"flex justify-around flex-1 gap-2"}>
+      <Card className={'flex flex-col h-full gap-4 p-4'}>
+        <h2 className={'lg:text-xl text-secondary'}>Top Performers</h2>
+        <div className={'flex h-full flex-col gap-4'}>
+          <div className={"flex justify-around gap-2"}>
             <Button
               isActive={timeRange == LeadsTimeRange.Sevendays}
               onClick={() => setTimeRange(LeadsTimeRange.Sevendays)}>7 days</Button>
@@ -84,10 +84,15 @@ export const LeadsboardSection = () => {
               isActive={timeRange == LeadsTimeRange.Sixtydays}
               onClick={() => setTimeRange(LeadsTimeRange.Sixtydays)}>60 days</Button>
           </div>
-          <div>
+          <div className={`flex flex-1 flex-col ${foundUsers ? '': 'justify-between'} `}>
             {
               foundUsers ?
                 foundUsers?.map((user, index) => {
+                  let rate = 0
+
+                  if(activeUsersRange) {
+                    rate = activeUsersRange[0].leads
+                  }
 
                   if (index >= 10) return;
 
@@ -100,10 +105,16 @@ export const LeadsboardSection = () => {
                       name={user.name}
                       place={index+1}
                       profilePic={user.profilePic}
+                      rate={rate}
                     />
                   )
                 })
                 : activeUsersRange?.map((user, index) => {
+                  let rate = 0
+
+                  if(activeUsersRange) {
+                    rate = activeUsersRange[0].leads
+                  }
 
                   if (index >= 10) return;
 
@@ -116,6 +127,7 @@ export const LeadsboardSection = () => {
                       name={user.name}
                       place={index+1}
                       profilePic={user.profilePic}
+                      rate={rate}
                     />
                   )
                 })

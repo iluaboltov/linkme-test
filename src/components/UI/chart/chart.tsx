@@ -1,4 +1,5 @@
 import { getChartData } from "@/api/getChartData";
+import { Card } from "@/components/UI/card"
 import {
   CategoryScale,
   ChartData,
@@ -55,9 +56,9 @@ export const Chart = () => {
   }
   //TODO Create right data type
   return (
-    <>
+    <Card>
       {/*@ts-ignore*/}
       <Line data={chartData} options={options} />
-    </>
+    </Card>
   )
 }

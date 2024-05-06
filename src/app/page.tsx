@@ -8,16 +8,15 @@ import { Header } from "@/components/shared/header";
 //TODO CHANGE FONT WEIGHT
 export default function Home() {
   return (
-    <div className={'flex'}>
-      <AsideMenu/>
-      {/*TODO Make Gradient*/}
-      <main className={'flex flex-col gap-6 w-full pl-4 pr-4 pt-10 pb-16'}>
-          <Header/>
-        <div className={'flex justify-between gap-4'}>
+    <>
+      <AsideMenu />
+      <main className={'flex flex-col flex-1 gap-6 sm:gap-12 w-full pl-8 pr-8 pt-10 pb-16'}>
+        <Header/>
+        <div className={'flex flex-col sm:flex-row justify-between h-full gap-4 lg:gap-8'}>
           <ChartSection/>
           <LeadsboardSection/>
         </div>
       </main>
-    </div>
+    </>
   );
 }

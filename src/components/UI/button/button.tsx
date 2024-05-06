@@ -9,7 +9,7 @@ export const Button = ({children, classNames='', isActive=false, onClick}:
                   }) => {
   return (
     <div
-      className={twMerge(`flex justify-center items-center h-12 w-full text-sm rounded-full ease-in-out transition-all ${isActive ? "text-white shadow-2xl shadow-light-purple bg-gradient-blue" : "bg-[#f1f0f2] text-primary"} ` + classNames)}
+      className={twMerge(`flex justify-center items-center h-8 lg:h-12 w-full text-xs lg:text-sm text-primary rounded-full ease-in-out transition-all ${isActive ? "text-white shadow-2xl shadow-light-purple bg-gradient-blue" : "bg-[#f1f0f2] text-primary"} ` + classNames)}
       onClick={onClick}
     >
       {children}

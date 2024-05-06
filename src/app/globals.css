@@ -2,53 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: 'Graphik';
-  src: url('/fonts/GraphikCompact-Regular.otf') format('truetype');
-  font-weight: 400;
-  line-height: 1.2;
+    font-family: 'Graphik';
+    src: url('/fonts/GraphikCompact-Regular.otf') format('truetype');
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 .swiper-button-next:after{
-  font-weight: bold;
+    font-weight: bold;
 }
 .swiper-wrapper {
-  height: fit-content !important;
+    height: fit-content !important;
 }
 .swiper-slide {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  height: fit-content !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: fit-content !important;
 }
 
 swiper-slide-active {
-  height: fit-content !important;
+    height: fit-content !important;
 }
 
 :root {
-  --swiper-navigation-top-offset: 40%;
-  --swiper-navigation-sides-offset: 10px;
-  --swiper-navigation-size: 14px !important;
-  --swiper-navigation-color: white;
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-size: 1rem !important;
+    --swiper-navigation-color: white;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: #e4e4e5 linear-gradient(146deg, rgba(252, 253, 255, 1) 6.42%, rgba(229, 234, 253, 1) 47%, rgba(237, 240, 250, 1) 90%);
-}
-
-h1 {
-  font-size: 1.875rem;
-  font-weight: bold;
-  color: #343243;
+    color: rgb(var(--foreground-rgb));
+    background: #e4e4e5 linear-gradient(146deg, rgba(252, 253, 255, 1) 6.42%, rgba(229, 234, 253, 1) 47%, rgba(237, 240, 250, 1) 90%);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
-

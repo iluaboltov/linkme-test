@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {twMerge} from "tailwind-merge"
 
-export const MenuItem = ({children, className, href, onClick}:
+export const MenuItem = ({children, className="", href, onClick}:
                     {
                       children?: React.ReactNode,
                       className?: string,
@@ -10,10 +10,10 @@ export const MenuItem = ({children, className, href, onClick}:
                     }) => {
   return(
     <Link
-      className={twMerge('flex items-center gap-4 m-2 text-sm font-normal text-secondary transition-all ease-in-out ' + className)}
+      className={twMerge('flex items-center gap-2 md:gap-4 m-2 text-sm font-normal text-secondary transition-all ease-in-out ' + className)}
       href={href}
       onClick={onClick}
-      >
+    >
       {children}
     </Link>
   )
