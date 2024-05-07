@@ -26,6 +26,25 @@ const config: Config = {
       },
       fontFamily: {
         Graphik: 'Graphik',
+      },
+      fontSize : {
+        base: ["1rem",{
+          lineHeight: "1.1"
+        }],
+        lg: ["1.125rem",{
+          lineHeight: "1"
+        }],
+        sm: ["0.875rem",{
+          lineHeight: "1"
+        }],
+        xl: ["1.25rem",{
+          lineHeight: "1"
+        }],
+      },
+      screens: {
+        "4xl": "1800px",
+        "md": "840px",
+        "xs": { "max": "639px"}
       }
     },
   },
