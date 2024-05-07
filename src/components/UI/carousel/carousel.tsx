@@ -16,18 +16,18 @@ export const Carousel = () => {
         navigation={true}
       >
         <SwiperSlide className={" flex justify-center items-center "}>
-          <GroupsOutlinedIcon sx={{ fontSize: { lg: "12rem", md: "9rem", sm: "6rem", xl: "13rem", xs: "8rem"} }} />
+          <GroupsOutlinedIcon className={'opacity-70'} sx={{ fontSize: {'@media (max-width: 639px)':{ fontSize: "6rem"}, lg: "12rem", md: "9rem", sm: "8rem", xl: "13rem", xs: "8rem"} }} />
         </SwiperSlide>
         <SwiperSlide className={" flex justify-center items-center "}>
-          <GroupsOutlinedIcon sx={{ fontSize: { lg: "12rem", md: "9rem", sm: "6rem", xl: "13rem", xs: "8rem"} }} />
+          <GroupsOutlinedIcon className={'opacity-70'} sx={{ fontSize: {'@media (max-width: 639px)':{ fontSize: "6rem"}, lg: "12rem", md: "9rem", sm: "8rem", xl: "13rem", xs: "8rem"} }} />
         </SwiperSlide>
         <SwiperSlide className={" flex justify-center items-center "}>
-          <GroupsOutlinedIcon sx={{ fontSize: { lg: "12rem", md: "9rem", sm: "6rem", xl: "13rem", xs: "8rem"} }} />
+          <GroupsOutlinedIcon className={'opacity-70'} sx={{ fontSize: {'@media (max-width: 639px)':{ fontSize: "6rem"}, lg: "12rem", md: "9rem", sm: "8rem", xl: "13rem", xs: "8rem"} }} />
         </SwiperSlide>
       </Swiper>
       <div className={'relative flex mb-4 items-center'}>
         <Link
-          className={'flex mx-auto items-center w-fit h-full sm:h-10 text-xs 2xl:text-sm font-light min-h-6 md:min-h-8 p-4 pl-6 pr-6 bg-white bg-opacity-20 border-solid border border-opacity-10 border-white rounded-full'}
+          className={'flex mx-auto items-center w-fit h-full xs:h-6 sm:h-10 text-xs 2xl:text-sm font-light min-h-6 md:min-h-8 p-4 pl-6 pr-6 bg-white bg-opacity-20 border-solid border border-opacity-10 border-white rounded-full'}
           href={"#"}
         >
           See details

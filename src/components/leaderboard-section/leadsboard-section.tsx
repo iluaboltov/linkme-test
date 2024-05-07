@@ -20,6 +20,7 @@ export const LeadsboardSection = () => {
   const [users, setUsers] = useState<SortedUserRecord | null>(null)
   const [activeUsersRange, setActiveUsersRange] = useState<UserRecord[] | null>(null)
   const [foundUsers, setFoundUsers] = useState<UserRecord[] | null>(null)
+  const [ascDesc, setAscDesc] = useState<"ASC" | "DESC">('ASC')
   useEffect(()=>{
     setLoading(true)
     getUsers().then((data)=>{
@@ -46,15 +47,15 @@ export const LeadsboardSection = () => {
   // TODO RESPONSIVENESS
   if(isLoading || !users) {
     return (
-      <section className={'flex flex-col flex-1 max-w-[30rem] gap-2'}>
-        <SkeletonSearch/>
-        <Card className={'p-2'}>
+      <section className={'flex flex-col flex-1 md:max-w-[30rem] gap-2'}>
+        <Card className={'flex flex-1 flex-col gap-2 p-2 h-full'}>
+          <SkeletonSearch/>
           <div className={'flex gap-1'}>
             <Skeleton count={4}>
               <SkeletonButton/>
             </Skeleton>
           </div>
-          <div>
+          <div className={'flex flex-1 flex-col justify-between'}>
             <Skeleton count={10}>
               <SkeletonLeadsItem/>
             </Skeleton>
@@ -65,10 +66,10 @@ export const LeadsboardSection = () => {
   }
 
   return (
-    <section className={'flex flex-col flex-1 h-full min-w-80 max-w-[60rem] gap-4'}>
-      <Search onChange={setFoundUsers} users={activeUsersRange}/>
+    <section className={'flex flex-col flex-1 h-full lg:min-w-80 max-w-[60rem] gap-4'}>
+      <Search changeSort={setAscDesc} onChange={setFoundUsers} sort={ascDesc} users={activeUsersRange}/>
       <Card className={'flex flex-col h-full gap-4 p-4'}>
-        <h2 className={'lg:text-xl text-secondary'}>Top Performers</h2>
+        <h2 className={'text-2xl md:text-lg lg:text-xl text-secondary'}>Top Performers</h2>
         <div className={'flex h-full flex-col gap-4'}>
           <div className={"flex justify-around gap-2"}>
             <Button
@@ -84,12 +85,12 @@ export const LeadsboardSection = () => {
               isActive={timeRange == LeadsTimeRange.Sixtydays}
               onClick={() => setTimeRange(LeadsTimeRange.Sixtydays)}>60 days</Button>
           </div>
-          <div className={`flex flex-1 flex-col ${foundUsers ? '': 'justify-between'} `}>
+          <div className={`flex flex-1 flex-col gap-4 md:gap-0 ${foundUsers ? '': 'justify-between'} `}>
             {
               foundUsers ?
                 foundUsers?.map((user, index) => {
                   let rate = 0
-
+                  console.log(foundUsers, user);
                   if(activeUsersRange) {
                     rate = activeUsersRange[0].leads
                   }

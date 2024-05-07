@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { PageAnimatePresence } from "../components/HOC/page-animate-presence";
 import "./globals.css";
 
 
@@ -15,11 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <PageAnimatePresence>
       <body className={'flex font-Graphik'}>
-        {children}
+          {children}
       </body>
-    </PageAnimatePresence>
     </html>
   );
 }

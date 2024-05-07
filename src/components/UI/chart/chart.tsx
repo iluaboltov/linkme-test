@@ -30,7 +30,8 @@ export const Chart = () => {
         display: false
       }
     },
-    responsive: true
+    responsive: true,
+
   };
   useEffect(()=>{
     setIsLoading(true)
@@ -50,7 +51,7 @@ export const Chart = () => {
   //TODO CHANGE SKELETON
   if (isLoading || !chartData) {
     return (
-      <div className={'w-full h-[40vh] bg-light-blue rounded-lg animate-pulse'}>
+      <div className={'w-full h-80 lg:h-96 bg-light-blue rounded-lg animate-pulse'}>
       </div>
     )
   }
@@ -58,7 +59,7 @@ export const Chart = () => {
   return (
     <Card>
       {/*@ts-ignore*/}
-      <Line data={chartData} options={options} />
+      <Line className={'min-h-[20rem]'} data={chartData} options={options} />
     </Card>
   )
 }

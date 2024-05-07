@@ -9,18 +9,23 @@ export const WidgetStatistic = ({amount, label, link='#'}:
                                     link?: string
                                   }) => {
   return (
-    <Card className={'flex flex-1 gap-2 justify-between h-14 md:h-16 lg:h-24 p-2 pb-3 pt-3 sm:p-4'}>
-      <div className={'flex flex-col justify-center'}>
-        <span className={'text-secondary text-md text-xs sm:text-sm lg:text-lg 2xl:text-xl'}>
+    <Card className={'flex flex-1 gap-2 justify-between md:h-20 xl:h-24 2xl:h-28 p-2 pb-3 pt-3 sm:p-4'}>
+      <div className={'flex flex-col gap-2 justify-center'}>
+        <span className={'text-secondary text-xl md:text-lg'}>
           {label}
         </span>
-          <span className={'text-primary font-medium tracking-wide text-xs sm:text-sm lg:text-lg 2xl:text-xl'}>
+          <span className={'flex items-end text-primary font-medium tracking-wide text-xl md:text-lg leading-6'}>
           {amount}
         </span>
       </div>
-      <div className={'flex md:justify-start flex-col-reverse'}>
+      <div className={'flex flex-col gap-2 justify-center'}>
+        <div
+          className={'opacity-0 select-none w-full text-[0.6rem] text-lg md:text-sm xl:text-lg '}
+        >
+          .
+        </div>
         <Link
-          className={'text-[#7487fa] text-[0.6rem] lg:text-sm'}
+          className={'text-[#7487fa] text-[0.6rem] text-lg md:text-sm xl:text-lg '}
           href={link}
         >
           See details

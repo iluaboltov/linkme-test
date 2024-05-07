@@ -7,9 +7,9 @@ export const WidgetDiagram = () => {
   return (
     <Card className={"flex flex-col min-w-[20vw] flex-1 min-h-72 p-4 md:p-6 md:pt-8 md:pb-8 gap-2 sm:gap-6"}>
       <div className={'flex flex-col gap-2'}>
-        <span className={"text-secondary text-sm md:text-md xl:text-2xl"}>New Leads</span>
+        <span className={"text-secondary text-sm md:text-base xl:text-xl"}>New Leads</span>
         <span className={"text-4xl md:text-5xl font-extrabold"}>742</span>
-        <span className={"text-secondary text-sm md:text-md xl:text-2xl"}>Leads for event this <DropdownText
+        <span className={"text-secondary text-[0.75rem] lg:text-base"}>Leads for event this <DropdownText
           labels={["week", "month", "year"]} /></span>
 
       </div>
@@ -25,7 +25,7 @@ export const WidgetDiagram = () => {
         className={'flex justify-center'}
       >
         <Link
-          className={'text-blue text-sm md:text-md xl:text-xl mt-4'}
+          className={'text-blue text-sm md:text-base xl:text-xl mt-4'}
           href={"#"}
         >
           See details
