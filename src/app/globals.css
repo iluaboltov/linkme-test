@@ -40,6 +40,36 @@ body {
     background: #e4e4e5 linear-gradient(146deg, rgba(252, 253, 255, 1) 6.42%, rgba(229, 234, 253, 1) 47%, rgba(237, 240, 250, 1) 90%);
 }
 
+.tooltip-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border-radius: 15px;
+    padding: 1rem;
+    line-height: 1;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    background-color: #f7f8fd;
+}
+
+.tooltip-dayTitle {
+    font-size: 0.65rem; /* 14px */
+    line-height: 1;
+    color: rgba(39,37,54,0.6);
+    letter-spacing: 0.025rem;
+}
+
+.tooltip-leadsNumber {
+    font-size: 2rem; /* 18px */
+    line-height: 1;
+    color: #302d43;
+}
+
+.tooltip-dayOfWeek {
+    font-size: 0.875rem; /* 16px */
+    line-height: 1;
+    color: rgba(39,37,54,0.6);
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
