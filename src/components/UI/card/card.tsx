@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-export const Card = ({children,className}:
+export const Card = ({children,className=""}:
                 {
                   children: React.ReactNode,
                   className?: string,
