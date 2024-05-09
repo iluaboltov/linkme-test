@@ -73,7 +73,7 @@ export const Chart = () => {
     chart.config.data.datasets[1].data = [...dashedSlice ?? []]
     chart.config.data.datasets[0].data = [...lineSlice ?? []]
     if (!(chart.config.options)) return;
-    chart.config.options.animation = { duration: 0}
+    chart.config.options.animation = { duration: 100, easing: "easeInOutSine"}
     setActiveChartIndex(dotElement[0].index)
   }
 
@@ -89,9 +89,12 @@ export const Chart = () => {
         },
         options: {
           ...prevState?.options,
-          animation: {},
+          animation: {
+            easing: "easeInCubic"
+          },
           elements: {
             point: {
+              hitRadius: 20,
               pointStyle: alternatePointStyle,
             },
           }
@@ -138,6 +141,54 @@ export const Chart = () => {
           })
         },
         options: {
+          scales: {
+            x: {
+              ticks: {
+                font: {
+                  size: () => {
+                    if (!window.outerWidth) return;
+
+                    if (window.outerWidth < 840) {
+                      return 10;
+                    }
+
+                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
+                      return 10;
+                    }
+                    if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
+                      return 8;
+                    }
+                    if (window.outerWidth > 1500) {
+                      return 15;
+                    }
+                  }
+                }
+              }
+            },
+            y: {
+              ticks: {
+                font: {
+                  size: () => {
+                    if (!window.outerWidth) return;
+
+                    if (window.outerWidth < 840) {
+                      return 10;
+                    }
+
+                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
+                      return 10;
+                    }
+                    if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
+                      return 8;
+                    }
+                    if (window.outerWidth > 1500) {
+                      return 15;
+                    }
+                  }
+                }
+              }
+            }
+          },
           animation: {
             x: {
               delay(ctx:{index: number, xStarted: boolean, yStarted: boolean} & ScriptableContext<"line">) {
@@ -179,7 +230,7 @@ export const Chart = () => {
             },
           },
           layout: {
-            padding: 20
+            padding: 20,
           },
           plugins: {
             legend: {
@@ -210,10 +261,11 @@ export const Chart = () => {
       </div>
     )
   }
+
   return (
     <Card>
-      <div className={'flex justify-between p-4 text-primary'}>
-        <span className={'flex justify-center items-center text-base md:text-md xl:text-2xl'}>Overview</span>
+      <div className={'flex justify-between p-4 text-secondary'}>
+        <span className={'flex justify-center items-center text-lg xl:text-2xl'}>Overview</span>
         <div className={'flex gap-2'}>
           <div className={'flex pl-4 pr-4 pt-1 pb-1 justify-center items-center rounded-full bg-light-blue/50'}>
             <span>CES</span>
@@ -226,14 +278,14 @@ export const Chart = () => {
         </div>
       </div>
       <div className={'relative'}>
-        <Line className={"relative min-h-[20rem] "}
+        <Line className={"relative min-h-[20rem]"}
               data={chartProps?.data!}
               onMouseMove={(e) => onClickSkip(e)}
               options={chartProps?.options}
               ref={chartRef} />
-        <div className={'absolute flex flex-col bg-white p-2 gap-2 top-1 left-4'}>
-          <span className={'text-primary text-4xl lg:text-5xl font-semibold tracking-wide'}>{leadsAmount}</span>
-          <div className={'flex gap-2'}>
+        <div className={'absolute flex flex-col bg-white p-2 gap-2 top-1 left-0 pl-4 pb-4'}>
+          <span className={'text-primary text-4xl lg:text-3xl font-semibold tracking-wide'}>{leadsAmount}</span>
+          <div className={'flex gap-2 text-sm md:text-base xl:text-lg '}>
             <span className={'text-secondary'}>Number of new leads</span>
             <Link
               className={'text-blue'}
