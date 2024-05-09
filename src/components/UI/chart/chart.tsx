@@ -11,8 +11,8 @@ import {
   Legend,
   LineElement,
   LinearScale,
-  PointElement,
-  ScriptableContext, Title, Tooltip,
+  Point,
+  PointElement, ScriptableContext, Title, Tooltip,
 } from "chart.js";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -64,13 +64,14 @@ export const Chart = () => {
     if (dotElement.length === 0 || dotElement[0].index === lastIndex || dotElement[0].index === 0) return;
 
     const lineSlice = dotElement[0].index === 0 ? initialChartData?.record.data.slice(0, dotElement[0].index) : initialChartData?.record.data.slice(0, dotElement[0].index+1);
-    const dashedSlice = initialChartData?.record.data.slice(dotElement[0].index)
+    const dashedSlice: (Point | null | number)[] = initialChartData?.record.data.slice(dotElement[0].index) ?? []
 
     for(let i = 0; i < dotElement[0].index; i++) {
       dashedSlice?.unshift(null)
     }
 
-    chart.config.data.datasets[1].data = [...dashedSlice ?? []]
+    // @ts-ignore
+    chart.config.data.datasets[1].data = [...dashedSlice]
     chart.config.data.datasets[0].data = [...lineSlice ?? []]
     if (!(chart.config.options)) return;
     chart.config.options.animation = { duration: 100, easing: "easeInOutSine"}
@@ -142,6 +143,7 @@ export const Chart = () => {
         },
         options: {
           animation: {
+            /*@ts-ignore*/
             x: {
               delay(ctx:{index: number, xStarted: boolean, yStarted: boolean} & ScriptableContext<"line">) {
                 const dataLength = initialChartData?.record.data.length
