@@ -15,7 +15,7 @@ export const AsideDesktop = () => {
 
   return (
     <aside
-      className={'flex flex-col justify-between bg-gradient-grey pl-6 lg:pl-8 xl:pl-10 4xl:pl-12 pr-4 sm:pr-6 xl:pr-4 pt-6 sm:pt-10 pb-12 sm:pb-16'}>
+      className={'flex flex-col justify-between bg-gradient-grey pl-6 lg:pl-6 xl:pl-10 4xl:pl-12 pr-4 sm:pr-6 xl:pr-4 pt-6 sm:pt-10 pb-12 sm:pb-16'}>
       <div>
         <div className={'relative w-[96px] h-[16px] md:w-[160px] md:h-[20px] xl:w-[190px] xl:h-[24px] 2xl:w-[253px] 2xl:h-[31px]'}>
           <Image
@@ -27,17 +27,17 @@ export const AsideDesktop = () => {
         </div>
 
         {/*TODO CHANGE ICONS*/}
-        <nav className={'flex flex-col mt-4 md:mt-8 lg:mt-12 gap-0.5 md:gap-4'}>
+        <nav className={'flex flex-col mt-4 md:mt-8 lg:mt-12 gap-0.5 md:gap-2'}>
           <MenuItem
             className={`${isActive === 1 ? 'text-primary' : ''}`}
             href={'#'}
             onClick={() => setActive(1)}
           >
             <HomeOutlinedIcon
-              sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
-                Home
-              </span>
+              sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
+              Home
+            </span>
           </MenuItem>
 
           <MenuItem
@@ -46,10 +46,10 @@ export const AsideDesktop = () => {
             onClick={() => setActive(0)}
           >
             <CalendarTodayOutlinedIcon
-              sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
-                Events
-              </span>
+              sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
+              Events
+            </span>
           </MenuItem>
 
 
@@ -59,10 +59,10 @@ export const AsideDesktop = () => {
             onClick={() => setActive(2)}
           >
             <CampaignOutlinedIcon
-              sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
-                Leads
-              </span>
+              sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
+              Leads
+            </span>
           </MenuItem>
 
           <MenuItem
@@ -71,10 +71,10 @@ export const AsideDesktop = () => {
             onClick={() => setActive(3)}
           >
             <GroupsOutlinedIcon
-              sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
-                Team
-              </span>
+              sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
+              Team
+            </span>
           </MenuItem>
 
           <MenuItem
@@ -83,8 +83,8 @@ export const AsideDesktop = () => {
             onClick={() => setActive(4)}
           >
             <PaidOutlinedIcon
-              sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
+              sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
               Team incentive
             </span>
           </MenuItem>
@@ -95,8 +95,8 @@ export const AsideDesktop = () => {
             onClick={() => setActive(5)}
           >
             <AssignmentOutlinedIcon
-              sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
+              sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
               Plans / Upgrade
             </span>
           </MenuItem>
@@ -107,8 +107,8 @@ export const AsideDesktop = () => {
             onClick={() => setActive(6)}
           >
             <HelpOutlineIcon
-              sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
+              sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+            <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
               Support
             </span>
           </MenuItem>
@@ -122,8 +122,8 @@ export const AsideDesktop = () => {
           onClick={() => setActive(7)}
         >
           <PersonAddAlt1OutlinedIcon
-            sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
-          <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl '}>
+            sx={{ fontSize: {  md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.75rem" } }} />
+          <span className={'tracking-wide text-[0.6rem] sm:text-xs md:text-sm 2xl:text-xl '}>
             Invite people
           </span>
         </MenuItem>
