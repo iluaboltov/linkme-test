@@ -5,7 +5,7 @@ import { WidgetDiagram } from "../widget-diagram";
 import { WidgetStatistic } from "../widget-statistic";
 export const ChartSection = () => {
   return (
-    <section className={'flex flex-col h-full max-w-[100vw] md:min-w-[30rem] lg:max-w-[50vw] 2xl:max-w-[45vw] gap-6 md:gap-4'}>
+    <section className={'flex flex-col h-full max-w-[100vw] md:max-w-[30rem] lg:max-w-[50vw] 2xl:max-w-[45vw] gap-6 md:gap-4'}>
       <div className={'flex gap-2 sm:gap-4'}>
         <WidgetStatistic
           amount={"2,879"}

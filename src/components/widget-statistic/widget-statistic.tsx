@@ -11,21 +11,21 @@ export const WidgetStatistic = ({amount, label, link='#'}:
   return (
     <Card className={'flex flex-1 gap-2 justify-between md:h-20 xl:h-24 2xl:h-28 p-2 pb-3 pt-3 sm:p-4'}>
       <div className={'flex flex-col gap-2 justify-center'}>
-        <span className={'text-secondary text-xl md:text-lg'}>
+        <span className={'text-secondary text-xl md:text-lg 2xl:text-xl'}>
           {label}
         </span>
-          <span className={'flex items-end text-primary font-medium tracking-wide text-xl md:text-lg leading-6'}>
+          <span className={'flex items-end text-primary font-medium tracking-wide text-xl md:text-lg 2xl:text-xl leading-6'}>
           {amount}
         </span>
       </div>
       <div className={'flex flex-col gap-2 justify-center'}>
         <div
-          className={'opacity-0 select-none w-full text-[0.6rem] text-lg md:text-sm xl:text-lg '}
+          className={'opacity-0 select-none w-full text-[0.6rem] text-lg md:text-sm xl:text-lg 2xl:text-xl '}
         >
           .
         </div>
         <Link
-          className={'text-[#7487fa] text-[0.6rem] text-lg md:text-sm xl:text-lg '}
+          className={'text-[#7487fa] text-[0.6rem] text-lg md:text-sm xl:text-lg 2xl:text-xl '}
           href={link}
         >
           See details

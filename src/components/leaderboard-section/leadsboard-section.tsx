@@ -21,6 +21,7 @@ export const LeadsboardSection = () => {
   const [activeUsersRange, setActiveUsersRange] = useState<UserRecord[] | null>(null)
   const [foundUsers, setFoundUsers] = useState<UserRecord[] | null>(null)
   const [ascDesc, setAscDesc] = useState<"ASC" | "DESC">('ASC')
+
   useEffect(()=>{
     setLoading(true)
     getUsers().then((data)=>{
@@ -28,21 +29,14 @@ export const LeadsboardSection = () => {
     })
     setLoading(false)
   }, [])
+
   useEffect(() => {
 
     if (!users) return;
 
     const activeData = users[timeRange]
     setActiveUsersRange(activeData)
-  }, [users]);
-  useEffect(()=>{
-
-    if (!users) return;
-
-    const activeData = users[timeRange]
-    setActiveUsersRange(activeData)
-
-  }, [timeRange])
+  }, [users, timeRange]);
 
   // TODO RESPONSIVENESS
   if(isLoading || !users) {
@@ -96,7 +90,7 @@ export const LeadsboardSection = () => {
                   }
 
                   if (index >= 10) return;
-
+                  console.log(user);
                   return (
                     <LeadsItem
                       company={user.company}
