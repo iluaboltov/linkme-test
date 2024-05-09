@@ -141,54 +141,6 @@ export const Chart = () => {
           })
         },
         options: {
-          scales: {
-            x: {
-              ticks: {
-                font: {
-                  size: () => {
-                    if (!window.outerWidth) return;
-
-                    if (window.outerWidth < 840) {
-                      return 10;
-                    }
-
-                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
-                      return 10;
-                    }
-                    if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
-                      return 8;
-                    }
-                    if (window.outerWidth > 1500) {
-                      return 15;
-                    }
-                  }
-                }
-              }
-            },
-            y: {
-              ticks: {
-                font: {
-                  size: () => {
-                    if (!window.outerWidth) return;
-
-                    if (window.outerWidth < 840) {
-                      return 10;
-                    }
-
-                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
-                      return 10;
-                    }
-                    if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
-                      return 8;
-                    }
-                    if (window.outerWidth > 1500) {
-                      return 15;
-                    }
-                  }
-                }
-              }
-            }
-          },
           animation: {
             x: {
               delay(ctx:{index: number, xStarted: boolean, yStarted: boolean} & ScriptableContext<"line">) {
@@ -240,7 +192,55 @@ export const Chart = () => {
               enabled: false,
               external: (ctx)=>CustomTooltip(ctx, initialChartData),
             },
-          }, responsive: true,
+          },
+          responsive: true, scales: {
+            x: {
+              ticks: {
+                font: {
+                  size: () => {
+                    if (!window.outerWidth) return;
+
+                    if (window.outerWidth < 840) {
+                      return 10;
+                    }
+
+                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
+                      return 10;
+                    }
+                    if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
+                      return 8;
+                    }
+                    if (window.outerWidth > 1500) {
+                      return 15;
+                    }
+                  }
+                }
+              }
+            },
+            y: {
+              ticks: {
+                font: {
+                  size: () => {
+                    if (!window.outerWidth) return;
+
+                    if (window.outerWidth < 840) {
+                      return 10;
+                    }
+
+                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
+                      return 10;
+                    }
+                    if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
+                      return 8;
+                    }
+                    if (window.outerWidth > 1500) {
+                      return 15;
+                    }
+                  }
+                }
+              }
+            }
+          },
         },
     })
     setActiveChartIndex(initialChartData?.record?.data.length-1)
