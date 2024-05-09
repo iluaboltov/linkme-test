@@ -1,5 +1,7 @@
-export const CustomTooltip = (ctx, initialArray) => {
-  console.log(ctx);
+import { ChartRes } from "@/types/chartRes";
+import { BubbleDataPoint, Chart as ChartJS, ChartTypeRegistry, Point, TooltipModel } from "chart.js";
+
+export const CustomTooltip = (ctx: {chart: ChartJS<keyof ChartTypeRegistry, ([number, number] | BubbleDataPoint | Point | null | number)[], unknown>, tooltip: TooltipModel<"line">}, initialArray: ChartRes) => {
   let tooltipEl = document.getElementById('chartjs-tooltip')
   if (!tooltipEl) {
     tooltipEl = document.createElement('div')
@@ -28,12 +30,15 @@ export const CustomTooltip = (ctx, initialArray) => {
 
     let innerHtml = '<div class="tooltip-wrapper">';
 
-    console.log('titleLines', titleLines);
     innerHtml += '<span class="tooltip-dayTitle">' + titleLines + "\, " + "Leads" + '</span>';
-
-    console.log('bodyLines', bodyLines);
-    console.log('labelColors', tooltipModel);
-    const span = '<span class="tooltip-leadsNumber">' + bodyLines.lines[0] + '</span><span class="tooltip-dayOfWeek">' + initialArray.record.dates[ctx.tooltip.dataPoints[0].datasetIndex].dayOfWeek + '</span>';
+    console.log(initialArray.record);
+    let dayOfWeek = ''
+    initialArray.record.dates.map((date)=>{
+      if (date.date === ctx.tooltip.dataPoints[0].label) {
+        dayOfWeek = date.dayOfWeek
+      }
+    })
+    const span = '<span class="tooltip-leadsNumber">' + bodyLines.lines[0] + '</span><span class="tooltip-dayOfWeek">' + dayOfWeek + '</span>';
     innerHtml +=  span;
     innerHtml += '</div>';
 
@@ -47,7 +52,6 @@ export const CustomTooltip = (ctx, initialArray) => {
   tooltipEl.style.position = 'absolute';
   tooltipEl.style.left = position.left + window.scrollX + tooltipModel.caretX + 'px';
   tooltipEl.style.top = position.top + window.scrollY + tooltipModel.caretY + 'px';
-  tooltipEl.style.padding = tooltipModel.padding + 'px ' + tooltipModel.padding + 'px';
   tooltipEl.style.pointerEvents = 'none';
 
 }
