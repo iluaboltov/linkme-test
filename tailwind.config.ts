@@ -22,7 +22,7 @@ const config: Config = {
         "light-blue": "#d6ddff",
         "light-purple": "#B495FFCC",
         primary: "#302d43",
-        secondary: "#302D4399",
+        secondary: "rgba(39,37,54,0.6)",
       },
       fontFamily: {
         Graphik: 'Graphik',
