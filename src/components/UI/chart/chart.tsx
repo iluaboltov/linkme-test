@@ -95,7 +95,6 @@ export const Chart = () => {
           },
           elements: {
             point: {
-              hitRadius: 30,
               pointStyle: alternatePointStyle,
             },
           }
@@ -193,7 +192,8 @@ export const Chart = () => {
             tooltip: {
               enabled: false,
               external: (ctx)=>CustomTooltip(ctx, initialChartData),
-            },
+              position: "nearest",
+            }
           },
           scales: {
             x: {

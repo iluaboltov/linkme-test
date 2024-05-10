@@ -84,13 +84,11 @@ export const LeadsboardSection = () => {
               foundUsers ?
                 foundUsers?.map((user, index) => {
                   let rate = 0
-                  console.log(foundUsers, user);
                   if(activeUsersRange) {
                     rate = activeUsersRange[0].leads
                   }
 
                   if (index >= 10) return;
-                  console.log(user);
                   return (
                     <LeadsItem
                       company={user.company}

@@ -31,7 +31,6 @@ export const CustomTooltip = (ctx: {chart: ChartJS<keyof ChartTypeRegistry, ([nu
     let innerHtml = '<div class="tooltip-wrapper">';
 
     innerHtml += '<span class="tooltip-dayTitle">' + titleLines + "\, " + "Leads" + '</span>';
-    console.log(initialArray.record);
     let dayOfWeek = ''
     initialArray.record.dates.map((date)=>{
       if (date.date === ctx.tooltip.dataPoints[0].label) {
