@@ -95,7 +95,7 @@ export const Chart = () => {
           },
           elements: {
             point: {
-              hitRadius: 100,
+              hitRadius: 70,
               pointStyle: alternatePointStyle,
             },
           }
@@ -204,7 +204,7 @@ export const Chart = () => {
                     if (!window.outerWidth) return;
 
                     if (window.outerWidth < 450) {
-                      return 3;
+                      return 4;
                     }
 
                     if (window.outerWidth < 560) {
@@ -231,7 +231,7 @@ export const Chart = () => {
                     if (!window.outerWidth) return;
 
                     if (window.outerWidth < 450) {
-                      return 3;
+                      return 4;
                     }
 
                     if (window.outerWidth < 560) {
