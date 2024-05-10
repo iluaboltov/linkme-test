@@ -202,6 +202,10 @@ export const Chart = () => {
                   size: () => {
                     if (!window.outerWidth) return;
 
+                    if (window.outerWidth < 450) {
+                      return 3;
+                    }
+
                     if (window.outerWidth < 560) {
                       return 6;
                     }
@@ -224,6 +228,10 @@ export const Chart = () => {
                 font: {
                   size: () => {
                     if (!window.outerWidth) return;
+
+                    if (window.outerWidth < 450) {
+                      return 3;
+                    }
 
                     if (window.outerWidth < 560) {
                       return 6;
