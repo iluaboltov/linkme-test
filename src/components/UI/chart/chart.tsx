@@ -95,6 +95,7 @@ export const Chart = () => {
           },
           elements: {
             point: {
+              hitRadius: 100,
               pointStyle: alternatePointStyle,
             },
           }
