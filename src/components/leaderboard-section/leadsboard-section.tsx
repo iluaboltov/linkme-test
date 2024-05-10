@@ -41,7 +41,7 @@ export const LeadsboardSection = () => {
   // TODO RESPONSIVENESS
   if(isLoading || !users) {
     return (
-      <section className={'flex flex-col flex-1 md:max-w-[30rem] gap-2'}>
+      <section className={'flex flex-col flex-1 w-full gap-2'}>
         <Card className={'flex flex-1 flex-col gap-2 p-2 h-full'}>
           <SkeletonSearch/>
           <div className={'flex gap-1'}>

@@ -95,7 +95,7 @@ export const Chart = () => {
           },
           elements: {
             point: {
-              hitRadius: 20,
+              hitRadius: 30,
               pointStyle: alternatePointStyle,
             },
           }
@@ -195,7 +195,7 @@ export const Chart = () => {
               external: (ctx)=>CustomTooltip(ctx, initialChartData),
             },
           },
-          responsive: true, scales: {
+          scales: {
             x: {
               ticks: {
                 font: {

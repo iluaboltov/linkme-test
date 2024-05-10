@@ -64,7 +64,7 @@ export const AsideMobile = () => {
               >
                 <HomeOutlinedIcon
                   sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                   Home
                 </span>
               </MenuItem>
@@ -79,7 +79,7 @@ export const AsideMobile = () => {
               >
                 <CalendarTodayOutlinedIcon
                   sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                  Events
                 </span>
               </MenuItem>
@@ -95,7 +95,7 @@ export const AsideMobile = () => {
               >
                 <CampaignOutlinedIcon
                   sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                   Leads
                 </span>
               </MenuItem>
@@ -110,7 +110,7 @@ export const AsideMobile = () => {
               >
                 <GroupsOutlinedIcon
                   sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                   Team
                 </span>
               </MenuItem>
@@ -125,7 +125,7 @@ export const AsideMobile = () => {
               >
                 <PaidOutlinedIcon
                   sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                   Team incentive
                 </span>
               </MenuItem>
@@ -140,7 +140,7 @@ export const AsideMobile = () => {
               >
                 <AssignmentOutlinedIcon
                   sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                   Plans / Upgrade
                 </span>
               </MenuItem>
@@ -155,7 +155,7 @@ export const AsideMobile = () => {
               >
                 <HelpOutlineIcon
                   sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+                <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                   Support
                 </span>
               </MenuItem>
@@ -173,7 +173,7 @@ export const AsideMobile = () => {
             >
               <PersonAddAlt1OutlinedIcon
                 sx={{ fontSize: { lg: "1.75rem", md: "1.4rem", sm: "0.875rem", xl: "1.875rem", xs: "0.8rem" } }} />
-              <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-base lg:text-lg 2xl:text-xl "}>
+              <span className={"tracking-wide text-[0.8rem] sm:text-xs md:text-lg 2xl:text-xl "}>
                 Invite people
               </span>
             </MenuItem>
