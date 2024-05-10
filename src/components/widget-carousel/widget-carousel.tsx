@@ -9,9 +9,9 @@ export const WidgetCarousel = ({className = ''}:
   return (
     <div className={'flex flex-col flex-1 items-center min-w-[20vw] min-h-72 '}>
       <Card
-        className={twMerge("flex flex-col h-full w-full text-white flex-1 gap-4 p-4 bg-gradient-pink-blue " + className)}>
+        className={twMerge("flex flex-col h-full w-full text-white flex-1 gap-4 p-4 md:p-2 lg:p-4 bg-gradient-pink-blue " + className)}>
         <div className={"flex flex-col gap-1"}>
-          <h2 className={"text-4xl lg:text-5xl font-semibold tracking-wide"}>1000</h2>
+          <h2 className={"text-4xl lg:text-5xl  font-semibold tracking-wide"}>1000</h2>
           <div className={"flex flex-col text-[0.75rem] lg:text-sm opacity-40"}>
             <span>Great job at the event!</span>
             <span>Many new leads today, great job everyone</span>

@@ -27,13 +27,13 @@ export const Carousel = () => {
       </Swiper>
       <div className={'relative flex mb-4 items-center'}>
         <Link
-          className={'flex mx-auto items-center w-fit h-full xs:h-6 sm:h-10 text-xs 2xl:text-sm font-light min-h-6 md:min-h-8 p-4 pl-6 pr-6 bg-white bg-opacity-20 border-solid border border-opacity-10 border-white rounded-full'}
+          className={'flex mx-auto items-center w-fit 2xs:text-[0.5rem] text-xs 2xl:text-sm 4xl:text-lg font-light 2xs:min-h-2.5 min-h-6 md:min-h-8 2xs:p-2 4xl:p-6 4xl:pl-8 4xl:pr-8 p-4 pl-6 pr-6 bg-white bg-opacity-20 border-solid border border-opacity-10 border-white rounded-full'}
           href={"#"}
         >
           See details
         </Link>
         <WaveHandIcon
-          className={'absolute right-0 p-2 h-full bg-white bg-opacity-20 border-solid border border-opacity-10 border-white rounded-full'} />
+          className={'absolute right-0 2xs:p-1 p-2 h-full bg-white bg-opacity-20 border-solid border border-opacity-10 border-white rounded-full'} />
       </div>
     </div>
   )

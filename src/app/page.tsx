@@ -10,8 +10,7 @@ import React from "react";
 
 //TODO CHANGE FONT WEIGHT
 export default function Home() {
-  const isDesktop = useBetterMediaQuery('(min-width: 1000px)')
-
+  const isDesktop = useBetterMediaQuery('(min-width: 1024px)')
   if(isDesktop == null) {
     return (
       <SkeletonBody/>
@@ -23,7 +22,9 @@ export default function Home() {
       <AsideMenu isDesktop={isDesktop}/>
       <main className={'flex flex-col flex-1 gap-6 sm:gap-12 w-full pl-4 pr-4 lg:pr-8 pt-10 pb-16'}>
         <Header/>
-        <div className={'flex flex-col md:flex-row justify-between h-full gap-8 md:gap-4 xl:gap-6 2xl:gap-8'}>
+        <div
+          className={'flex flex-col md:flex-row justify-between h-full gap-8 md:gap-4 xl:gap-6 2xl:gap-8'}
+        >
           <ChartSection/>
           <LeadsboardSection/>
         </div>

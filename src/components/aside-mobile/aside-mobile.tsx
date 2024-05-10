@@ -10,29 +10,38 @@ import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
 import PersonAddAlt1OutlinedIcon from "@mui/icons-material/PersonAddAlt1Outlined";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const AsideMobile = () => {
   const [isActive, setActive] = useState(0)
   const [isOpened, setIsOpen] = useState(false)
 
+  useEffect(() => {
+    if (isOpened) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'scroll'
+    }
+  }, [isOpened]);
   return (
     <>
       <MenuIcon className={'absolute left-2 top-2 fill-gray-400'} onClick={()=> setIsOpen(prevState => !prevState)}/>
       <motion.div
         animate={isOpened ? {
           display: "block",
-          opacity: 1
+          opacity: 1,
+          zIndex: 1000,
         } : {
           opacity: 0,
           transitionEnd: {
             display: "none"
-          }
+          },
+          zIndex: -10,
         }
         }
         className={'flex'}>
         <aside
-          className={`${isOpened ? "absolute" : "hidden"} left-0 top-0 z-50 flex flex-col justify-between h-full bg-gradient-grey pl-4 sm:pl-12 pr-4 sm:pr-6 pt-6 sm:pt-10 pb-12 sm:pb-16`}>
+          className={`absolute ${isOpened ? "z-[100] overflow-hidden" : "-z-[1]"} left-0 top-0 z-50 flex flex-col justify-between h-full bg-gradient-grey pl-4 sm:pl-12 pr-4 sm:pr-6 pt-6 sm:pt-10 pb-12 sm:pb-16`}>
           <div>
             <div className={"relative w-[146px] h-[35px] md:w-[253px] md:h-[31px]"}>
               <Image
@@ -170,7 +179,7 @@ export const AsideMobile = () => {
             </MenuItem>
           </div>
         </aside>
-        <div className={"absolute w-full h-full z-40 bg-black/80"}
+        <div className={"absolute w-full h-full z-[99] bg-black/80"}
              onClick={() => setIsOpen(prevState => !prevState)}>
         </div>
       </motion.div>

@@ -42,6 +42,7 @@ const config: Config = {
         }],
       },
       screens: {
+        "2xs": { "max": "510px"},
         "4xl": "1800px",
         "md": "840px",
         "xs": { "max": "639px"}

@@ -202,12 +202,12 @@ export const Chart = () => {
                   size: () => {
                     if (!window.outerWidth) return;
 
-                    if (window.outerWidth < 840) {
-                      return 10;
+                    if (window.outerWidth < 560) {
+                      return 6;
                     }
 
-                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
-                      return 10;
+                    if (window.outerWidth > 560 && window.outerWidth < 1000) {
+                      return 8;
                     }
                     if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
                       return 8;
@@ -225,12 +225,12 @@ export const Chart = () => {
                   size: () => {
                     if (!window.outerWidth) return;
 
-                    if (window.outerWidth < 840) {
-                      return 10;
+                    if (window.outerWidth < 560) {
+                      return 6;
                     }
 
-                    if (window.outerWidth > 840 && window.outerWidth < 1000) {
-                      return 10;
+                    if (window.outerWidth > 560 && window.outerWidth < 1000) {
+                      return 8;
                     }
                     if (window.outerWidth > 1000 && window.outerWidth < 1500 ) {
                       return 8;
@@ -267,13 +267,13 @@ export const Chart = () => {
   return (
     <Card>
       <div className={'flex justify-between p-4 text-secondary'}>
-        <span className={'flex justify-center items-center text-lg xl:text-2xl'}>Overview</span>
+        <span className={'flex justify-center items-center xs:text-base text-lg xl:text-2xl'}>Overview</span>
         <div className={'flex gap-2'}>
-          <div className={'flex pl-4 pr-4 pt-1 pb-1 justify-center items-center rounded-full bg-light-blue/50'}>
+          <div className={'flex pl-4 pr-4 pt-1 pb-1 justify-center 2xs:text-xs xs:text-sm items-center rounded-full bg-light-blue/50'}>
             <span>CES</span>
             <span className={'flex justify-center items-center'}><KeyboardArrowDownIcon sx={{ fontSize: { md: 28 } }} /></span>
           </div>
-          <div className={'flex pl-4 pr-4 pt-1 pb-1 justify-center items-center rounded-full bg-light-blue/50'}>
+          <div className={'flex pl-4 pr-4 pt-1 pb-1 justify-center 2xs:text-xs xs:text-sm items-center rounded-full bg-light-blue/50'}>
             <span>{initialChartData?.record.dates[0].date} - {initialChartData?.record.dates[initialChartData?.record.dates.length - 1].date}</span>
             <span className={'flex justify-center items-center'}><KeyboardArrowDownIcon sx={{ fontSize: { md: 28 } }} /></span>
           </div>
